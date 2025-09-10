@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "WebShot - Web Service Screenshot Tool",
+  "version": "3.0.2",
+  "description": "Modern web screenshot tool.",
+  "background": {
+    "service_worker": "src/js/background.js"
+  },
+  "action": {
+    "default_popup": "src/html/popup.html",
+    "default_icon": "icons/icon32.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "downloads",
+    "notifications",
+    "storage",
+    "offscreen",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/js/libs/html2canvas.min.js",
+        "src/js/libs/xlsx.full.min.js",
+        "src/js/libs/jszip.min.js",
+        "src/js/content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "src/html/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
