@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Options - WebShot by Aplastine Team</title>
+  <link rel="stylesheet" href="../css/options.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>WebShot Options</h1>
+      <p class="tagline">Made with ❤️ by the Aplastine Team</p>
+    </header>
+
+    <section class="settings">
+      <h2>Settings</h2>
+
+      <div class="option-group">
+        <label for="folderName">Download Folder Name:</label>
+        <input type="text" id="folderName" placeholder="Enter folder name" />
+        <small>
+          Images and CSV will be saved in a subfolder inside your Downloads folder.<br>
+          Example: <span id="pathExample"></span>
+        </small>
+      </div>
+
+      <div class="option-group">
+        <label for="filenameConvention">Filename Convention:</label>
+        <select id="filenameConvention">
+          <option value="title">Title</option>
+          <option value="index">Index</option>
+          <option value="url">URL</option>
+          <option value="index-title">Index - Title</option>
+        </select>
+      </div>
+
+      <div class="option-group">
+        <label for="imageFormat">Image Format:</label>
+        <select id="imageFormat">
+          <option value="jpg">JPG</option>
+          <option value="png">PNG</option>
+        </select>
+      </div>
+
+      <div class="option-group">
+        <label for="imageQuality">Image Quality (JPEG, 1-100):</label>
+        <input type="number" id="imageQuality" min="1" max="100" />
+      </div>
+
+      <div class="option-group">
+        <label for="maxConcurrency">Max Parallel Tabs:</label>
+        <input type="number" id="maxConcurrency" min="1" max="10" />
+      </div>
+
+      <div class="option-group option-check">
+        <input type="checkbox" id="includeCSV" checked />
+        <label for="includeCSV">Include Report CSV file in Folder</label>
+      </div>
+
+      <button id="save" class="btn-primary">Save</button>
+      <span id="msg" class="save-msg" aria-live="polite"></span>
+    </section>
+
+    <section class="about-support">
+      <h2>About Aplastine</h2>
+      <p>
+        WebShot is developed and maintained by the Aplastine Team, passionate about delivering top-notch web tools for makers and developers.
+      </p>
+
+      <h2>Support Us</h2>
+      <p>If you like this extension, consider buying us a coffee or supporting us via PayPal!</p>
+
+      <div class="support-buttons">
+        <a href="https://buymeacoffee.com/aplastine" target="_blank" rel="noopener noreferrer" class="btn-coffee">
+          ☕ Buy me a coffee
+        </a>      </div>
+    </section>
+  </div>
+  <script src="../js/options.js"></script>
+</body>
+</html>

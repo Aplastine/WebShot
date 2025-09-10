@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebShot – Web Service Scanner</title>
+  <link rel="stylesheet" href="../css/popup.css">
+</head>
+
+<body>
+  <h1>WebShot</h1>
+
+  <div class="input-section">
+    <label for="inputType">Input Type:</label>
+    <select id="inputType">
+      <option value="urls">URL List</option>
+      <option value="nmap">Nmap XML</option>
+    </select>
+  </div>
+
+  <div class="textarea-section">
+    <textarea id="inputData" placeholder="Enter URLs or paste Nmap XML..."></textarea>
+  </div>
+
+  <div class="settings-section">
+    <label for="timeout">Timeout (seconds):</label>
+    <input type="number" id="timeout" min="1" step="1" value="20">
+
+    <label for="delay">Delay (seconds):</label>
+    <input type="number" id="delay" min="0" step="1" value="10">
+
+    <label for="format">Screenshot format:</label>
+    <select id="format">
+      <option value="png">PNG</option>
+      <option value="jpeg">JPEG</option>
+    </select>
+  </div>
+
+  <div class="settings-section">
+    <label for="screenshotType">Screenshot Type:</label>
+    <select id="screenshotType">
+      <option value="visible">Visible area</option>
+      <option value="fullpage">Full page</option>
+    </select>
+  </div>
+
+  <div class="buttons-section" style="margin-top: 18px;">
+    <button id="startScan">Start Scan</button>
+    <button id="exportResults" style="display: none;">Export Results</button>
+    <button id="openOptions" type="button" style="float:right; background: #f1f4ff; color: #2445a2; border: 1px solid #b5c8ea; margin-left: 12px;">Options</button>
+  </div>
+
+  <div id="progress"></div>
+  <div id="results"></div> <br>
+<div class="content">
+    <div style="font-size:0.93em; margin-bottom:14px;">
+      Made with <span style="color:#e44756; font-weight:bold;">♥</span> by the Aplastine Team<br><br>
+      <span style="color:#555;">Please set the folder name if required to download images in a separate folder from Options.</span>
+    </div>
+  <!-- Scripts -->
+  <script src="../js/utils/inputProcessor.js"></script>
+  <script src="../js/utils/reportGenerator.js"></script>
+  <script src="../js/popup.js"></script>
+</body>
+</html>
